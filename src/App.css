@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --primaryColor:#fdf0d5;
+    --textColor:#003049;
+    --accent:#c1121f;
+}
+.App .navbar{
+    background-color:var(--primaryColor);
+}
+.App ul{
+    display:flex;
+}
+.App ul li{
+    list-style: none;
+    padding:7px 30px;
+    text-decoration: none;
+    margin-top:5px;
+}
+.App a{
+    text-decoration: none;
+    color:var(--textColor);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home{
+    font-size:1.8rem;
+    background-color:var(--textColor);
+    color:#fff;
+    text-align: center;
+    min-height:93.5vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home p span{
+    color:red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background-color: aliceblue;
+    height:40vh;
+}
+.button h1{
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.memeGenerator{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+
+.memeGenerator input{
+    margin:1rem;
+}
+.memeGenerator button{
+    margin:0 8rem;
+    margin-bottom:1rem;
+}
+.memeGenerator .top{
+    top:0;
+}
+.memeGenerator .bottom{
+bottom:0;
+}
+.memeGenerator h2{
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+.memeGenerator .text{
+    position:relative;
+}
+.memeGenerator img{
+    width: 40vw;
+    height: 60vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* calculator */
+.buttons button{
+    width:5vw;
+    height:10vh;
+    margin:8px;
+    border:none;
+    /* background-color:gray; */
+    font-size:1.7rem;
+    border-radius:10px;
+    color:#fff;
+}
+.accent{background-color:rgb(88, 81, 81)!important;}
+.btn-danger{background-color:red;}
+.buttons{border:1px solid black;}
+.result{
+    /* width: 120px; */
+    height: 100px;
+    font-size:1.7rem;
+    font-weight: 700;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    border:1px solid black;
+    padding:10px;
+}
+.result p{float:right;}
+.calculator{text-align:center; margin-top:5rem;  }
+.wrapper{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+/* others */
+.noreact h1{margin:2rem 0;text-align: center;color:var(--textColor);}
+.cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 30px;
+        place-items: center;
+        margin:5rem 20rem;
+}
+.card{
+    width:18rem;
+}
+.card-img-top{
+    height:13rem;
+}
+.cards a{
+    color:#fff;
 }
